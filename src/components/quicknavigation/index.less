@@ -1,0 +1,52 @@
+@import '../../global.less';
+
+.quick-navigation {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  width: 72px;
+  z-index: 10000;
+  background: rgba(57, 57, 57, 0.8);
+  ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+  }
+  ul li {
+    width: 72px;
+    height: 72px;
+    cursor: pointer;
+    position: relative;
+  }
+  .quick-li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .quick-icon {
+      font-size: 22px;
+      line-height: 25px;
+      height: 25px;
+      padding-top: 4px;
+    }
+    .quick-li-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 17px;
+    }
+    &:hover {
+      background: @brand-primary;
+    }
+  }
+
+  .quick-navigation-tooltip {
+    width: 208px;
+    height: 72px;
+    background: #ffffff;
+    border-radius: 4px 4px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

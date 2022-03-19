@@ -1,0 +1,82 @@
+@import '../../global.less';
+
+.make-plan {
+  width: 380px;
+  height: 550px;
+  background: #f8f7f4;
+  border: 5px solid #f2f1f1;
+  padding: 30px;
+  .title-wrapper {
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #3f3f3f;
+      line-height: 22px;
+      text-align: center;
+      .img {
+        margin-right: 5px;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    .item {
+      padding: 0 6px;
+      margin-top: 20px;
+      width: 320px;
+      height: 40px;
+      background: #ffffff;
+      border-radius: 5px;
+      border: 1px solid #f2f1f1;
+      &:focus {
+        outline-color: unset;
+        outline-width: 1px;
+      }
+      .option {
+        select {
+          outline: none;
+        }
+      }
+    }
+    .action {
+      margin-top: 30px;
+      width: 320px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #3f3f3f;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 22px;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  .content-row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .item {
+      margin: 0;
+    }
+  }
+  .sms_btn {
+    width: 160px;
+    height: 36px;
+    font-size: 12px;
+    color: #ffffff;
+    background: #888;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 4px;
+  }
+  .error_msg {
+    color: #ff0000;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}

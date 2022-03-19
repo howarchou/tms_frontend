@@ -1,0 +1,54 @@
+{
+  "name": "tbwebsite",
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "dev": "npm run start",
+    "build": "umi build",
+    "dev:pre": "cross-env UMI_ENV=pre environment=pre umi dev",
+    "build:pre": "cross-env UMI_ENV=pre environment=pre umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.20",
+    "core-js": "^2.5.7",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "query-string": "^7.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-stickynode": "^3.0.5",
+    "react-tiga-swiper": "^1.0.8",
+    "umi": "^3.2.28",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^2.2.6",
+    "@types/moment": "^2.13.0",
+    "@types/react-stickynode": "^3.0.1",
+    "cross-env": "^7.0.2",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.29.1",
+    "rc-rate": "^2.9.1",
+    "react-html5video": "^2.5.1",
+    "react-rate": "0.0.1"
+  }
+}

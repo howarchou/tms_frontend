@@ -1,0 +1,88 @@
+.case-wrapper {
+  .case-banner-img {
+    width: 100%;
+    height: 420px;
+    margin-top: 60px;
+    background: url(http://img.yuyuetuanjian.cn/asset/case/anli.jpg) no-repeat
+      top center;
+    background-size: cover;
+  }
+  .tab-header {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tab-header-title {
+      font-size: 24px;
+      font-weight: 400;
+      color: #343434;
+      line-height: 24px;
+    }
+    .case-tab {
+      margin-top: 12px;
+    }
+  }
+}
+
+.case-card-wrapper {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .group-row {
+    min-width: 1180px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.case-card {
+  width: 380px;
+  height: 334px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #c7c7c7;
+  cursor: pointer;
+  &:first-child {
+    margin-left: 0;
+  }
+  .top {
+    .img {
+      width: 378px;
+      height: 252px;
+    }
+  }
+  .bottom {
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 16px;
+      color: #8f8f8f;
+      line-height: 22px;
+    }
+    .main-title {
+      margin-top: 6px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #343434;
+      line-height: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.partners-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  background: #f8f7f4;
+  align-items: center;
+  justify-content: center;
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #343434;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .partner-group {
+    display: flex;
+    width: 1200px;
+    flex-shrink: 0;
+    margin-top: 24px;
+    .partners-logo {
+      margin-left: 20px;
+      width: 180px;
+      height: 72px;
+      background: #ffffff;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0;
+      }
+      .logo-img {
+        border: 1px solid #ebf0f3;
+        width: 180px;
+        height: 72px;
+      }
+    }
+  }
+}

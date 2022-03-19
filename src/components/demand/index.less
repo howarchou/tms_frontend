@@ -1,0 +1,81 @@
+@import '../../global.less';
+
+.demand-wrapper {
+  background: #ffffff;
+  padding: 10px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      display: flex;
+      margin-top: 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .item {
+        flex: 1;
+        padding: 0 6px;
+        margin-left: 14px;
+        height: 40px;
+        border: 1px solid #f2f1f1;
+        background: #f2f1f1;
+        border-radius: 4px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:focus {
+          outline-color: unset;
+          outline-width: 1px;
+        }
+
+        .option {
+          select {
+            outline: none;
+          }
+        }
+      }
+
+      .item-textarea {
+        min-height: 60px;
+      }
+    }
+
+    .action {
+      margin: 40px auto 0;
+      width: 320px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background: #e94e38;
+      border-radius: 4px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 28px;
+    }
+  }
+
+  .sms_btn {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    color: #ffffff;
+    background: #888;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 4px;
+  }
+  .error_msg {
+    color: #ff0000;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}

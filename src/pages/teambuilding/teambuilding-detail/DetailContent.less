@@ -1,0 +1,92 @@
+.detail-content-wrapper {
+  overflow: hidden;
+  height: auto;
+  //display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .detail-content-wrapper-left {
+    padding-top: 26px;
+    width: 800px;
+    float: left;
+  }
+  .detail-content-wrapper-right {
+    width: 380px;
+    float: right;
+    margin-top: 20px;
+  }
+}
+
+.planner-introduce {
+  padding: 16px 0;
+  display: flex;
+  border-bottom: 1px dotted #c7c7c7;
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100px;
+    }
+    .name {
+      margin-top: 8px;
+      color: #343434;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .position {
+      margin-top: 8px;
+      color: #8f8f8f;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  .right {
+    margin-left: 36px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .desc {
+      width: 600px;
+      font-size: 14px;
+      color: #3f3f3f;
+      line-height: 20px;
+      font-weight: 700;
+      word-wrap: break-word;
+    }
+    .rateBox {
+      width: 580px;
+      margin: 20px 0 0 0;
+      .rateList {
+        width: 210px;
+        display: inline-block;
+        .title {
+          color: #8f8f8f;
+          font-size: 12px;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 16px;
+          height: 30px;
+          width: 52px;
+        }
+        .rate {
+          display: inline-block;
+          .rate-container {
+            .MuiRating-root {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+    //.rate {
+    //  margin-top: 20px;
+    //  height: 20px;
+    //}
+  }
+}

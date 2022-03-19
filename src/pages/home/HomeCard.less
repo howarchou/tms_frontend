@@ -1,0 +1,163 @@
+@import '../../global.less';
+.home-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .card-group {
+    display: flex;
+    margin-top: 36px;
+    width: 1200px;
+    flex-shrink: 0;
+    .card-wrapper {
+      width: 285px;
+      margin-right: 20px;
+      background: #ffffff;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        .card-content .card-action {
+          color: white;
+          background: @brand-primary;
+          border: unset;
+        }
+      }
+      .img {
+        width: 285px;
+        height: 190px;
+      }
+      .card-content {
+        padding: 0 15px;
+        .card-title {
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: 700;
+          color: #343434;
+          height: 50px;
+          line-height: 26px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .tag-wrapper {
+          margin-top: 20px;
+          display: flex;
+          .tag {
+            padding: 2px 1px;
+            margin-left: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #8f8f8f;
+            line-height: 12px;
+            background: #ebf0f3;
+            border-radius: 2px;
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        .card-desc {
+          height: 30px;
+          margin-top: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .desc {
+            margin: 0 auto;
+            width: 300px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            font-size: 12px;
+            font-weight: 400;
+            color: #343434;
+            line-height: 17px;
+            font-family: PingFangSC-Regular, PingFang SC;
+          }
+          .price-wrapper {
+            display: flex;
+            flex-shrink: 0;
+            .price {
+              font-size: 18px;
+              font-weight: 500;
+              color: @brand-primary;
+              line-height: 25px;
+              font-family: PingFangSC-Medium, PingFang SC;
+            }
+            .price-desc {
+              margin-top: 5px;
+              margin-left: 2px;
+              font-size: 12px;
+              font-weight: 400;
+              color: #585858;
+              line-height: 17px;
+              font-family: PingFangSC-Regular, PingFang SC;
+            }
+          }
+        }
+        .card-action {
+          height: 36px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: flex;
+          color: #8f8f8f;
+          align-items: center;
+          justify-content: center;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 400;
+          cursor: pointer;
+          border: 1px solid #ebf0f3;
+          &:hover {
+            color: white;
+            background: @brand-primary;
+            border: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-more-card-wrapper {
+  width: 285px;
+  height: 421px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  .top {
+    display: flex;
+    flex-direction: column;
+    .img {
+      height: 120px;
+      width: 120px;
+    }
+    .text {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #3f3f3f;
+      line-height: 45px;
+      text-align: center;
+    }
+  }
+  .more-button {
+    margin-top: 44px;
+    width: 160px;
+    height: 48px;
+    background: @brand-primary;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

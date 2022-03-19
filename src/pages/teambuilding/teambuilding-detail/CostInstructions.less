@@ -1,0 +1,50 @@
+.cost-instructions {
+  min-width: 800px;
+  margin-top: 40px;
+  .cost-list {
+    display: flex;
+    .content {
+      width: 388px;
+      margin-top: 20px;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+        margin-left: 0;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        background: #ffb4a9;
+        font-size: 14px;
+        font-weight: 500;
+        color: #343434;
+        line-height: 20px;
+      }
+      .item {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        .item-title {
+          color: #343434;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .item-circle {
+          flex-shrink: 0;
+          width: 6px;
+          height: 6px;
+          border-radius: 6px;
+          background: #c7c7c7;
+        }
+        .desc {
+          margin-left: 10px;
+          color: #343434;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '../../../../global.less';
+
+.tabCeiling {
+  position: fixed;
+  top: 50px;
+  z-index: 1000;
+  background: #fff;
+  width: 800px;
+}
+.tab-wrappers {
+  background-color: #fff;
+  // margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-bottom: 2px solid #f2f1f1;
+  z-index: 99;
+  .tab-item {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 40px;
+    cursor: pointer;
+    .tab-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 16px;
+    }
+    .title-wrapper {
+      display: flex;
+      flex-direction: column;
+      .tab-title {
+        font-size: 15px;
+        color: #8f8f8f;
+        line-height: 20px;
+      }
+    }
+    .tab-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: @brand-primary;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .tab-item-select {
+    color: @brand-primary;
+    font-weight: 700;
+    .title-wrapper {
+      .tab-title {
+        color: #343434;
+      }
+    }
+  }
+}
