@@ -4,6 +4,6 @@
 export default {
   define: {
     'process.env.environment': 'dev',
-    'process.env.baseUrl': 'http://api.cicisoft.cn',
+    'process.env.baseUrl': 'http://api.yuyuetuanjian.cn',
   },
 };

@@ -56,7 +56,7 @@ export default defineConfig({
   proxy: proxyConfig[environment || 'dev'],
   define: {
     'process.env.environment': 'dev',
-    'process.env.baseUrl': 'http://api.cicisoft.cn',
+    'process.env.baseUrl': 'http://api.yuyuetuanjian.cn',
   },
   hash: false,
 

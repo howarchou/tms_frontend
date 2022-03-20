@@ -32,6 +32,6 @@ export default function<T = any>(
   path: string,
   options?: any,
 ): Promise<RequestResponse<T>> {
-  const basePath = environment === 'pre' ? '/pre' : `${baseUrl ?? 'http://api.cicisoft.cn'}/h5`;
+  const basePath = environment === 'pre' ? '/pre' : `${baseUrl ?? 'http://api.yuyuetuanjian.cn'}/h5`;
   return request(`${basePath}${path}`, setProvince(options));
 }
