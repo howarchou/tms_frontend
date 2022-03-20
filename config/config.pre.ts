@@ -4,5 +4,6 @@
 export default {
   define: {
     'process.env.environment': 'pre',
+    'process.env.baseUrl': 'http://test.cicisoft.cn:8080',
   },
 };
