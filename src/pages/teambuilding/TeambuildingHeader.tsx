@@ -66,7 +66,7 @@ const SearchInput = (props: SearchInputProps) => {
     <div className="search_input_wrapper">
       <input className="input" onChange={handleChange} />
       <div className="action" onClick={handleSearch}>
-        <img className="icon" src={SEARCH_ICON} />
+        <img alt="icon" className="icon" src={SEARCH_ICON} />
         <div className="label">{searchBtnLabel}</div>
       </div>
     </div>

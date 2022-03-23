@@ -120,7 +120,7 @@ export default function(props: Props) {
               {/*{item.type === 'video' ? (*/}
               {/*  <VideoBanner banner={item} />*/}
               {/*) : (*/}
-              <img src={item.cover} alt="" />
+              <img src={item.cover} alt="cover" />
               {/*)}*/}
             </li>
           ))}

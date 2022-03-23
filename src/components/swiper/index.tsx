@@ -118,7 +118,7 @@ const Swiper: FC<TSwipperProps> = (props: TSwipperProps) => {
             <li className='item' key={i} onClick={() => {
               handleClickBanner(i);
             }}>
-              <img src={item} alt='' />
+              <img src={item} alt='icon' />
             </li>
           ))}
         </ul>

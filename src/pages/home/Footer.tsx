@@ -157,11 +157,11 @@ export default function() {
           </div>
           <div className="bottom">
             <img
-              className="img"
+              className="img" alt={'二维码'}
               src={'http://img.yuyuetuanjian.cn/asset/about/qrcode.jpg'}
             />
             <img
-              className="img"
+              className="img" alt={'二维码'}
               src={'http://img.yuyuetuanjian.cn/asset/about/qrcode.jpg'}
             />
           </div>

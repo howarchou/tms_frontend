@@ -21,7 +21,7 @@ export default function(props: Props) {
         <div className="theme">
           <div className="title">团建主题</div>
           {feature?.picture ? (
-            <img className="img" src={feature.picture} alt={'团建特色图片'} />
+            <img alt="desc" className="img" src={feature.picture} alt={'团建特色图片'} />
           ) : null}
           {feature?.description ? (
             <div className="theme-desc">{feature.description}</div>

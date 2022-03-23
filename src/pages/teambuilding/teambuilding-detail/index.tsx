@@ -190,11 +190,11 @@ const DetailHeaderCard = (props: CardProps) => {
             </div>
             <div className="desc">
               <div className="desc-item">
-                <img className="desc-img" src={Activity_Time_Icon} />
+                <img alt="desc" className="desc-img" src={Activity_Time_Icon} />
                 <div className="desc-text">{detail.duration}</div>
               </div>
               <div className="desc-item">
-                <img className="desc-img" src={Activity_People_Icon} />
+                <img alt="desc" className="desc-img" src={Activity_People_Icon} />
                 <div className="desc-text">{`${detail.people_number}人`}</div>
               </div>
             </div>

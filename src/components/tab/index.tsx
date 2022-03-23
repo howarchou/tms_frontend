@@ -48,7 +48,7 @@ export default function(props: Props) {
           >
             {tab.icon ? (
               <img
-                className="tab-icon"
+                className="tab-icon" alt="小图标"
                 src={selectTab?.id === tab.id ? tab.icon : tab.unselect_icon}
               />
             ) : null}

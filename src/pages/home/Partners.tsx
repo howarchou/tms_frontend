@@ -40,7 +40,7 @@ export default function(props: Props) {
                   className="partners-logo"
                   onClick={() => handleClick(logo)}
                 >
-                  <img className="logo-img" src={logo.cover} />
+                  <img alt="icon" className="logo-img" src={logo.cover} />
                 </div>
               );
             })}

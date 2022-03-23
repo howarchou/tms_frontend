@@ -31,7 +31,6 @@ export default function(props: any) {
       history.push('/');
     }
   }, []);
-  console.log(props.children);
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       <div className="layout-wrapper">
