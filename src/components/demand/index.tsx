@@ -19,7 +19,6 @@ export default function(props: DemandProps) {
   };
   const [values, setValues] = useState<any>(defaultVaule);
   const handleSubmit = () => {
-    console.log(values);
     if (!values?.contact_mobile) {
       alert('请输入手机号');
       return;

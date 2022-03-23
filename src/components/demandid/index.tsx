@@ -16,9 +16,8 @@ export default function(props: DemandProps) {
   const defaultVaule = { activity_id: id };
   const [values, setValues] = useState<any>(defaultVaule);
   const handleSubmit = () => {
-    console.log(values);
     if (!values?.contact_mobile) {
-      alert('请输入电话');
+      alert('请输入手机号');
       return;
     }
     saveOrders({ ...values }).then(() => {

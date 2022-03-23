@@ -27,7 +27,7 @@ export default function() {
         return (
           <div key={item.id} className="home-data-card">
             <div className="top">
-              <img className="img" src={item.imageUrl} />
+              <img alt="icon" className="img" src={item.imageUrl} />
               <div className="title">{item.title}</div>
             </div>
             <div className="explain">{item.explain}</div>

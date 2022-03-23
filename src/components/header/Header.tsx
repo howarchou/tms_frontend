@@ -36,7 +36,7 @@ function Slogan() {
 
   return (
     <div className="header-slogan" onClick={handleClick}>
-      <img className="slogna-icon" src={Logo} />
+      <img alt="logo" className="slogna-icon" src={Logo} />
     </div>
   );
 }
@@ -91,9 +91,9 @@ function Area() {
 
   return (
     <div className="header-area" onClick={handleClick}>
-      <img className="location-png" src={LocationPNG} />
+      <img alt="location" className="location-png" src={LocationPNG} />
       <div className="location">{location}</div>
-      <img className="area-arrow" src={icon === 'down' ? DownPNG : UPPNG} />
+      <img alt="icon" className="area-arrow" src={icon === 'down' ? DownPNG : UPPNG} />
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -198,7 +198,7 @@ function ContactUS() {
   const contact = citys.find(c => c.value === cityId)?.contact;
   return (
     <a className="contact-us" href={`tel:${contact}`}>
-      <img className="tel-icon" src={TELPNG} />
+      <img alt="icon" className="tel-icon" src={TELPNG} />
       <span className="tel">{contact}</span>
     </a>
   );

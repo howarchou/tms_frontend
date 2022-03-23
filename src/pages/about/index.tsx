@@ -18,7 +18,7 @@ export default function() {
         <div className="section">
           <SubTitleComponent title={'关于我们'} />
           <div className="content-wrapper">
-            <img className="logo" src={LOGO_IMG} />
+            <img alt="logo" className="logo" src={LOGO_IMG} />
             <div className="content">
               <div className="content-span">
                 鱼悦团建是隶属于北京酷玩文化有限公司，是一站式团建服务提供商，公司业务覆盖北京、上海、苏州、杭州、成都、西安等地，是“互联网+团建”理念的首倡者。目前可提供主题团建、趣味探险、旅行团建、军事拓展、室内培训等多维度、全覆盖的一站式团建服务体系。鱼悦团建以“老板放心
@@ -43,7 +43,7 @@ export default function() {
           <SubTitleComponent title={'联系我们'} />
           <div className="content-wrapper">
             <div className="content-item">
-              <img className="item-icon" src={ABOUT_TEL_IMG} />
+              <img alt="about" className="item-icon" src={ABOUT_TEL_IMG} />
               <div className="right">
                 <div className="title">联系电话</div>
                 <div className="title">021-65667525</div>
@@ -54,7 +54,7 @@ export default function() {
         <div className="section">
           <div className="content-wrapper">
             <div className="content-item">
-              <img className="item-icon" src={ABOUT_EMAIL_IMG} />
+              <img alt="about" className="item-icon" src={ABOUT_EMAIL_IMG} />
               <div className="right">
                 <div className="title">E-Mail</div>
                 <div className="title">yuyuewang@163.com</div>
@@ -65,7 +65,7 @@ export default function() {
         <div className="section">
           <div className="content-wrapper">
             <div className="content-item">
-              <img className="item-icon" src={ABOUT_ADDRESS_IMG} />
+              <img alt="about" className="item-icon" src={ABOUT_ADDRESS_IMG} />
               <div className="right">
                 <div className="title">地址</div>
                 <div className="title">

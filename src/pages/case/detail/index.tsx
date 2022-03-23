@@ -44,7 +44,7 @@ export default function(props: Props) {
       />
       <div className="content-wrapper">
         <div className="case-detail-header">
-          {detail?.logo ? <img className="logo" src={detail?.logo} /> : null}
+          {detail?.logo ? <img alt="logo" className="logo" src={detail?.logo} /> : null}
           <div className="title-wrapper">
             <div className="title">
               {detail?.company} | {detail?.name}
@@ -73,21 +73,21 @@ export default function(props: Props) {
               <div className="row">
                 <div className="left">
                   <div className="item">
-                    <img className="img" src={Personnel_ICON} />
+                    <img alt="icon" className="img" src={Personnel_ICON} />
                     <div className="label">{`人数：${detail?.people}人`}</div>
                   </div>
                   <div className="item">
-                    <img className="img" src={Mileage_ICON} />
+                    <img alt="icon" className="img" src={Mileage_ICON} />
                     <div className="label">{`车程：${detail?.distance}`}</div>
                   </div>
                 </div>
                 <div className="left">
                   <div className="item">
-                    <img className="img" src={Day_ICON} />
+                    <img alt="icon" className="img" src={Day_ICON} />
                     <div className="label">{`天数：${detail?.days}`}</div>
                   </div>
                   <div className="item">
-                    <img className="img" src={Place_ICON} />
+                    <img alt="icon" className="img" src={Place_ICON} />
                     <div className="label">{`地点：${detail?.address}`}</div>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ const RelatedProducts = (props: ProductProps) => {
 
   return (
     <div className="related-product">
-      <img className="img" src={activity.cover} />
+      <img alt="icon" className="img" src={activity.cover} />
       <div className="title">{activity.name}</div>
       <div className="desc-wrapper">
         <div className="label">{`${activity.duration} | ${activity.people_number}人`}</div>

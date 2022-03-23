@@ -63,7 +63,7 @@ export default function(props: MakePlanProps) {
       <div className="make-plan">
         <div className="title-wrapper">
           <div className="title">
-            <img className="img" src={Customization} />
+            <img alt="团建方案定制" className="img" src={Customization} />
             团建方案定制
           </div>
         </div>

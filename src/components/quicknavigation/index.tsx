@@ -142,7 +142,7 @@ export default function() {
     <div className="quick-navigation">
       <ul>
         <li className="quick-li" onClick={handleClickOpen}>
-          <img className="quick-icon" src={DEMAND_ICON} />
+          <img alt="icon" className="quick-icon" src={DEMAND_ICON} />
           <span className="quick-li-text">提需求</span>
         </li>
         <LightTooltip
@@ -153,12 +153,12 @@ export default function() {
           placement={'left'}
         >
           <li className="quick-li">
-            <img className="quick-icon" src={CALL_ICON} />
+            <img alt="icon" className="quick-icon" src={CALL_ICON} />
             <span className="quick-li-text">联系电话</span>
           </li>
         </LightTooltip>
         <li className="quick-li" onClick={handleScrollToTop}>
-          <img className="quick-icon" src={BACK_TOP_ICON} />
+          <img alt="back" className="quick-icon" src={BACK_TOP_ICON} />
           <span className="quick-li-text">返回顶部</span>
         </li>
       </ul>

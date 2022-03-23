@@ -43,6 +43,7 @@ export default () => {
 
   return (
     <div className="home-wrapper">
+      <h1>鱼跃团建</h1>
       <Swiper banners={banners} links={links} autoplay={true} />
       <Recommend />
       <HotRecommend data={hotPots} />
