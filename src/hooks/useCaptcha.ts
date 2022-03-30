@@ -8,7 +8,7 @@ export function useCaptcha(values: any) {
   const timerRef = useRef<NodeJS.Timeout>();
   const handleGetSmsCode = () => {
     if (!values?.contact_mobile) {
-      alert('请输入手机号');
+      setMessage('请输入手机号');
       return;
     }
     getSmsCode({ phone: values?.contact_mobile })

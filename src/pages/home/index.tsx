@@ -10,6 +10,7 @@ import HomeData from '@/pages/home/HomeData';
 import Partners from '@/pages/home/Partners';
 import { getBanners, getHotPots, getLogos } from '@/services';
 import Swiper from '@/components/swiper';
+import QuickMade from "@/pages/home/QuickMade"
 
 export default () => {
   const [banners, setBanner] = useState<string[]>([]);
@@ -43,8 +44,9 @@ export default () => {
 
   return (
     <div className="home-wrapper">
-      <h1>鱼跃团建</h1>
+      <h1>鱼悦团建</h1>
       <Swiper banners={banners} links={links} autoplay={true} />
+      <QuickMade />
       <Recommend />
       <HotRecommend data={hotPots} />
       <Advantage />
