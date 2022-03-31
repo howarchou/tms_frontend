@@ -18,6 +18,7 @@ export default function(props: DemandProps) {
     /* people_number: 2, price: 100, days: 1  */
   };
   const [values, setValues] = useState<any>(defaultVaule);
+  const { second, handleGetSmsCode, message, reset } = useCaptcha(values);
   const handleSubmit = () => {
     if (!values?.contact_mobile) {
       alert('请输入手机号');
@@ -30,7 +31,6 @@ export default function(props: DemandProps) {
     saveOrders({ ...values })
       .then(res => {
         // alert('提交成功!');
-
         onSuccess();
 
         //TODO 增加埋点
@@ -38,7 +38,7 @@ export default function(props: DemandProps) {
       })
       .catch(({ data }) => {
         alert(data.error ?? 'Error');
-      });
+      }).finally(() => reset())
   };
 
   const handleOnSelectChange = (key: string, value: string) => {
@@ -49,7 +49,7 @@ export default function(props: DemandProps) {
     setValues({ ...values, [key]: value });
   };
 
-  const { second, handleGetSmsCode, message } = useCaptcha(values);
+
   return (
     <div className="demand-wrapper">
       <div className="content">

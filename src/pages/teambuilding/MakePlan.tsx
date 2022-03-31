@@ -18,6 +18,7 @@ export default function(props: MakePlanProps) {
   const { onSuccess = NOOP } = props;
   const defaultVaule = {};
   const [values, setValues] = useState<any>(defaultVaule);
+  const { second, handleGetSmsCode, message, reset} = useCaptcha(values);
   const handleSubmit = () => {
     console.log(values);
     if (!values?.contact_mobile) {
@@ -39,7 +40,7 @@ export default function(props: MakePlanProps) {
       })
       .catch(({ data }) => {
         alert(data.error ?? 'Error');
-      });
+      }).finally(() => reset())
   };
 
   const c = (key: string, value: string) => {
@@ -51,7 +52,7 @@ export default function(props: MakePlanProps) {
   };
   const [footerTop, setFooterTop] = useState(0);
 
-  const { second, handleGetSmsCode, message } = useCaptcha(values);
+
   useEffect(() => {
     const footer = document.getElementById('footer');
     setFooterTop(footer?.offsetTop || 0);

@@ -1,156 +1,146 @@
 /**
  *  Created by pw on 2020/11/14 10:47 下午.
  */
-import React, { useState } from 'react';
-import './index.less';
-import { OrdersParamsType, saveOrders } from '@/services/orders';
-import { NOOP } from '@/lib/Conts';
-import { genAgl } from '@/lib/fcagl';
-import { useCaptcha } from '@/hooks';
+import React, { useState } from 'react'
+import './index.less'
+import { OrdersParamsType, saveOrders } from '@/services/orders'
+import { NOOP } from '@/lib/Conts'
+import { genAgl } from '@/lib/fcagl'
+import { useCaptcha } from '@/hooks'
+
 interface DemandProps {
   onSuccess?: () => void;
   id: string;
 }
-export default function(props: DemandProps) {
-  const { id, onSuccess = NOOP } = props;
-  const defaultVaule = { activity_id: id };
-  const [values, setValues] = useState<any>(defaultVaule);
+
+export default function ( props: DemandProps ) {
+  const { id, onSuccess = NOOP } = props
+  const defaultVaule = { activity_id: id }
+
+  const [ values, setValues ] = useState<any>(defaultVaule)
+  const { second, handleGetSmsCode, message, reset } = useCaptcha(values)
+
   const handleSubmit = () => {
     if (!values?.contact_mobile) {
-      alert('请输入手机号');
-      return;
+      alert('请输入手机号')
+      return
     }
     saveOrders({ ...values }).then(() => {
-      onSuccess();
-
+      onSuccess()
       //TODO 增加埋点
-      genAgl();
-    });
-  };
+      genAgl()
+    }).finally(() => reset())
+  }
 
-  const handleOnSelectChange = (key: string, value: string) => {
-    setValues({ ...values, [key]: value });
-  };
+  const handleOnSelectChange = ( key: string, value: string ) => {
+    setValues({ ...values, [ key ]: value })
+  }
 
-  const handleInputChange = (key: string, value: any) => {
-    setValues({ ...values, [key]: value });
-  };
-  const { second, handleGetSmsCode, message } = useCaptcha(values);
+  const handleInputChange = ( key: string, value: any ) => {
+    setValues({ ...values, [ key ]: value })
+  }
 
   return (
     <div className="demand-wrapper">
       <div className="content">
         <div className="row">
-          {/*<select*/}
-          {/*  className="item"*/}
-          {/*  name={'people_number'}*/}
-          {/*  placeholder="出行人数"*/}
-          {/*  onChange={e => handleOnSelectChange('people_number', e.target.value)}*/}
-          {/*>*/}
-          {/*  <option value={'2'}>2人</option>*/}
-          {/*  <option value={'5'}>5人</option>*/}
-          {/*  <option value={'10+'}>10人以上</option>*/}
-          {/*</select>*/}
-          <input
-            className="item"
-            name={'people_number'}
-            type={'number'}
-            placeholder={'出行人数'}
-            onChange={e =>
+          {/*<select*/ }
+          {/*  className="item"*/ }
+          {/*  name={'people_number'}*/ }
+          {/*  placeholder="出行人数"*/ }
+          {/*  onChange={e => handleOnSelectChange('people_number', e.target.value)}*/ }
+          {/*>*/ }
+          {/*  <option value={'2'}>2人</option>*/ }
+          {/*  <option value={'5'}>5人</option>*/ }
+          {/*  <option value={'10+'}>10人以上</option>*/ }
+          {/*</select>*/ }
+          <input className="item"
+            name={ 'people_number' }
+            type={ 'number' }
+            placeholder={ '出行人数' }
+            onChange={ e =>
               handleInputChange('people_number', Number(e.target.value))
-            }
-          />
-          {/*<select*/}
-          {/*  className="item"*/}
-          {/*  name={'price'}*/}
-          {/*  placeholder="人均预算"*/}
-          {/*  onChange={e => handleOnSelectChange('price', e.target.value)}*/}
-          {/*>*/}
-          {/*  <option value={'100'}>100元</option>*/}
-          {/*  <option value={'500'}>500元</option>*/}
-          {/*  <option value={'1000+'}>1000元以上</option>*/}
-          {/*</select>*/}
-          <input
-            name={'price'}
+            }/>
+          {/*<select*/ }
+          {/*  className="item"*/ }
+          {/*  name={'price'}*/ }
+          {/*  placeholder="人均预算"*/ }
+          {/*  onChange={e => handleOnSelectChange('price', e.target.value)}*/ }
+          {/*>*/ }
+          {/*  <option value={'100'}>100元</option>*/ }
+          {/*  <option value={'500'}>500元</option>*/ }
+          {/*  <option value={'1000+'}>1000元以上</option>*/ }
+          {/*</select>*/ }
+          <input name={ 'price' }
             className="item"
-            placeholder={'人均预算'}
-            type={'number'}
-            onChange={e => handleInputChange('price', Number(e.target.value))}
-          />
+            placeholder={ '人均预算' }
+            type={ 'number' }
+            onChange={ e => handleInputChange('price', Number(e.target.value)) }/>
         </div>
         <div className="row">
-          {/*<select*/}
-          {/*  className="item"*/}
-          {/*  name={'days'}*/}
-          {/*  placeholder="团建天数"*/}
-          {/*  onChange={e => handleOnSelectChange('days', e.target.value)}*/}
-          {/*>*/}
-          {/*  <option value={'1'}>1天</option>*/}
-          {/*  <option value={'2'}>2天</option>*/}
-          {/*  <option value={'3'}>3天</option>*/}
-          {/*  <option value={'3+'}>3天以上</option>*/}
-          {/*</select>*/}
-          <input
-            name={'days'}
+          {/*<select*/ }
+          {/*  className="item"*/ }
+          {/*  name={'days'}*/ }
+          {/*  placeholder="团建天数"*/ }
+          {/*  onChange={e => handleOnSelectChange('days', e.target.value)}*/ }
+          {/*>*/ }
+          {/*  <option value={'1'}>1天</option>*/ }
+          {/*  <option value={'2'}>2天</option>*/ }
+          {/*  <option value={'3'}>3天</option>*/ }
+          {/*  <option value={'3+'}>3天以上</option>*/ }
+          {/*</select>*/ }
+          <input name={ 'days' }
             className="item"
-            placeholder={'团建天数'}
-            type={'number'}
-            onChange={e => handleInputChange('days', Number(e.target.value))}
-          />
-          <input
-            className="item"
-            name={'contact'}
-            placeholder={'联系人'}
-            onChange={e => handleInputChange('contact', e.target.value)}
-          />
+            placeholder={ '团建天数' }
+            type={ 'number' }
+            onChange={ e => handleInputChange('days', Number(e.target.value)) }/>
+          <input className="item"
+            name={ 'contact' }
+            placeholder={ '联系人' }
+            onChange={ e => handleInputChange('contact', e.target.value) }/>
         </div>
         <div className="row">
-          <input
-            className="item"
-            name={'contact_mobile'}
-            placeholder={'联系手机号'}
-            onChange={e => handleInputChange('contact_mobile', e.target.value)}
-          />
-          {second !== undefined && second >= 0 ? (
-            <button className="sms_btn">已下发（{second}s）</button>
+          <input className="item"
+            name={ 'contact_mobile' }
+            placeholder={ '联系手机号' }
+            onChange={ e => handleInputChange('contact_mobile', e.target.value) }/>
+          { second !== undefined && second >= 0 ? (
+            <button className="sms_btn">已下发（{ second }s）</button>
           ) : (
-            <button className="sms_btn" onClick={() => handleGetSmsCode()}>
-              获取验证码
-            </button>
-          )}
-          {/*<input*/}
-          {/*  className="item"*/}
-          {/*  name={'wx'}*/}
-          {/*  placeholder={'微信号'}*/}
-          {/*  onChange={e => handleInputChange('wx', e.target.value)}*/}
-          {/*/>*/}
+            <button className="sms_btn"
+              onClick={ () => handleGetSmsCode() }>
+              获取验证码 </button>
+          ) }
+          {/*<input*/ }
+          {/*  className="item"*/ }
+          {/*  name={'wx'}*/ }
+          {/*  placeholder={'微信号'}*/ }
+          {/*  onChange={e => handleInputChange('wx', e.target.value)}*/ }
+          {/*/>*/ }
         </div>
-        {message && (
+        { message && (
           <div className="row">
-            <p className="error_msg">{message}</p>
+            <p className="error_msg">{ message }</p>
           </div>
-        )}
+        ) }
         <div className="row">
-          <input
-            className="item"
-            name={'captcha'}
-            placeholder={'验证码'}
-            onChange={e => handleInputChange('captcha', e.target.value)}
-          />
+          <input className="item"
+            name={ 'captcha' }
+            placeholder={ '验证码' }
+            onChange={ e => handleInputChange('captcha', e.target.value) }/>
         </div>
         <div className="row">
-          <textarea
-            className="item item-textarea"
-            name={'remark'}
+          <textarea className="item item-textarea"
+            name={ 'remark' }
             placeholder="其它备注"
-            onChange={e => handleInputChange('remark', e.target.value)}
-          />
+            onChange={ e => handleInputChange('remark', e.target.value) }/>
         </div>
 
-        <div className="action" onClick={handleSubmit}>
+        <div className="action"
+          onClick={ handleSubmit }>
           提交需求
         </div>
       </div>
     </div>
-  );
+  )
 }

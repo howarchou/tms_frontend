@@ -17,7 +17,7 @@ export default function () {
   const [ error, setError ] = useState('')
   const [ values, setValues ] = useState<any>(defaultValue)
   const {
-    second, handleGetSmsCode, message
+    second, handleGetSmsCode, message, reset
   }
     = useCaptcha(values)
   const handleSubmit = () => {
@@ -37,7 +37,8 @@ export default function () {
       setValues(defaultValue)
       //TODO 增加埋点
       genAgl()
-    })
+      alert('提交成功')
+    }).finally(() => reset())
   }
   useEffect(() => {
     setError(message ?? '')
