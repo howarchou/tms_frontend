@@ -60,7 +60,7 @@ export default function () {
   }
   return (
     <div className='quick-wrapper'>
-      <p><span>公司团建活动策划</span></p>
+      <p><span>免费提供公司团建策划方案</span></p>
       <div className='form-item'>
         <input placeholder='请输入您的称呼'
           type='text'
@@ -70,7 +70,7 @@ export default function () {
           onChange={ e => handleInputChange('contact', e.target.value) }
           required/>
 
-        <input placeholder='填写手机号码，获取免费公司团建活动策划名额'
+        <input placeholder='填写手机号码，免费提供公司团建策划方案'
           type='text'
           className="item-phone"
           name="contact_mobile"
