@@ -22,6 +22,9 @@ const Product: React.FC = () => {
     10: 12,
     11: 8,
     12: 15,
+    13: 15,
+    14: 15,
+    15: 10,
   } as any)[params?.type];
 
   const imgList = useRef<HTMLDivElement[]>();
